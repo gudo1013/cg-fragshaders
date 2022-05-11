@@ -25,7 +25,7 @@ void main() {
         color.y = 0.0;
         color.z = 0.0;
     }
-    else if(x < centerdist && y < centerdist && length(vector) > sideoffset* 2.0){
+    else if(x < centerdist && y < centerdist && length(vector) < sideoffset * 2.0){
         color.x = 0.0;
         color.y = 0.0;
         color.z = 0.0;
@@ -41,5 +41,6 @@ void main() {
         color.y = newGreen;
         color.z = newBlue;
     }
+    
     FragColor = color;
 }
