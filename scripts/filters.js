@@ -236,6 +236,7 @@ class GlApp {
         if (this.filter === 'custom') {
             this.gl.uniform1f(shader.uniforms.width, this.video.videoWidth);
             this.gl.uniform1f(shader.uniforms.height, this.video.videoHeight);
+            this.gl.uniform1f(shader.uniforms.time, time / 1000.0);
         }
         else if (this.filter === 'ripple') {
             this.gl.uniform1f(shader.uniforms.time, time / 1000.0);
